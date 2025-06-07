@@ -12,7 +12,7 @@ Please navigate to the appropriate folder or file based on the week you're looki
 
 ## ✅ Usage
 
-1. Browse the files named by week (e.g., `Week-01 Assignments`, `Week-02 Assignments`, etc.).
+1. Browse the files named by week (e.g., `week1_assignments`, `week2_assignment`, etc.).
 2. Open the desired assignment file and click on **open in collab**.
 3. Run the code to test it.
 
