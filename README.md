@@ -12,7 +12,7 @@ Please navigate to the appropriate folder or file based on the week you're looki
 
 ## ✅ Usage
 
-1. Browse the files named by week (e.g., `week1_assignments.ipynb`, `week2_assignment.ipynb`, etc.).
+1. Browse the files named by week (e.g., `week1_assignment.ipynb`, `week2_assignment.ipynb`, etc.).
 2. Open the desired assignment file and click on **open in collab**.
 3. Run the code to test it.
 
