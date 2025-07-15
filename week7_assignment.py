@@ -1,3 +1,8 @@
+# my app is availible to be accessed at https://arnavchopra-ct-csi-ds-4264.streamlit.app/
+#simply copy paste this link in your browser and ypu can see what i have made!!
+#and of course the source code is below
+
+
 import pandas as pd 
 import numpy as np
 from sklearn.model_selection import train_test_split
