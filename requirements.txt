@@ -1,6 +1,6 @@
 streamlit
+python-dotenv
 pandas
-numpy
-scikit-learn
-matplotlib
-seaborn
+sentence-transformers
+pinecone-client
+groq
