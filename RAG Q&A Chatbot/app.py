@@ -103,7 +103,7 @@ with col2:
 @st.cache_resource
 def init_connections():
     with st.spinner("🔌 Connecting to services..."):
-        pc = pinecone.init(api_key=st.secrets["PINECONE_API_KEY"])
+        pc = Pinecone.init(api_key=st.secrets["PINECONE_API_KEY"])
         index = pc.Index("loan-rag-index")
         groq_client = Groq(api_key=st.secrets["GROQ_API_KEY"])
         embedding_model = SentenceTransformer('all-MiniLM-L6-v2')
