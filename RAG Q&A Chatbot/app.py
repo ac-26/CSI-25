@@ -3,7 +3,6 @@ import os
 
 load_dotenv()
 
-
 import streamlit as st
 import pandas as pd
 from sentence_transformers import SentenceTransformer
@@ -103,11 +102,18 @@ with col2:
 @st.cache_resource
 def init_connections():
     with st.spinner("🔌 Connecting to services..."):
-        pc = pinecone.init(api_key=st.secrets["PINECONE_API_KEY"])
+        pinecone_api_key = os.getenv("PINECONE_API_KEY")
+        groq_api_key = os.getenv("GROQ_API_KEY")
+
+        if not pinecone_api_key or not groq_api_key:
+            raise ValueError("Missing API keys in environment variables")
+
+        pc = pinecone.init(api_key=pinecone_api_key)
         index = pc.Index("loan-rag-index")
-        groq_client = Groq(api_key=st.secrets["GROQ_API_KEY"])
+        groq_Client = Groq(groq_api_key)
         embedding_model = SentenceTransformer('all-MiniLM-L6-v2')
-    return index, groq_client, embedding_model
+
+    return index, groq_Client, embedding_model
 
 
 try:
